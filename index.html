@@ -833,7 +833,7 @@
         // Configuration
         const EVASION_DISTANCE = 120;
         let isMoving = false;
-        let isOnLeft = true; // Track button position
+        let isOnLeft = false; // Cambiar a false para empezar en la derecha
 
         // Function to calculate distance between two points
         function getDistance(x1, y1, x2, y2) {
@@ -851,7 +851,7 @@
             
             // Define two fixed positions (left and right)
             // Left position: partially visible on the left
-            const leftPosition = -60; // Más visible
+            const leftPosition = -40; // Ajustado a -40px
             
             // Right position: to the right of YES button with more spacing
             const rightPosition = yesButton.width + 60;
@@ -1129,11 +1129,15 @@
             }
         }
 
-        // Initialize button position (start on the left)
+        // Initialize button position (start on the right)
         window.addEventListener('load', () => {
             btnNo.style.position = 'absolute';
             btnNo.style.top = '0px';
-            btnNo.style.left = '-60px'; // Coincide con leftPosition
+            
+            // Calculate right position based on YES button
+            const yesButton = btnYes.getBoundingClientRect();
+            const rightPosition = yesButton.width + 60;
+            btnNo.style.left = rightPosition + 'px';
         });
     </script>
 </body>

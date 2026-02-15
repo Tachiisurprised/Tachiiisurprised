@@ -29,7 +29,7 @@
             align-items: center;
             justify-content: center;
             background: linear-gradient(135deg, var(--blush) 0%, var(--lavender) 50%, var(--peach) 100%);
-            overflow: hidden;
+            overflow-x: hidden;
             position: relative;
         }
 
@@ -82,13 +82,14 @@
             background: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(20px);
             border-radius: 40px;
-            padding: 60px 40px;
+            padding: 60px 80px;
             max-width: 550px;
             width: 90%;
             box-shadow: 0 30px 80px var(--shadow),
                         0 0 0 1px rgba(255, 255, 255, 0.8) inset;
             text-align: center;
             animation: fadeIn 1s ease-out;
+            overflow: visible;
         }
 
         @keyframes fadeIn {
@@ -162,6 +163,7 @@
             min-height: 80px;
             opacity: 0;
             animation: fadeInUp 1s ease-out 0.9s forwards;
+            overflow: visible;
         }
 
         .btn {
@@ -217,6 +219,7 @@
             color: #D8537F;
             position: absolute;
             transition: all 0.15s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            z-index: 5;
         }
 
         .btn-no:hover {
@@ -306,7 +309,7 @@
         /* Responsive design */
         @media (max-width: 600px) {
             .container {
-                padding: 40px 25px;
+                padding: 40px 30px;
             }
 
             .title {
@@ -677,39 +680,37 @@
         // Configuration
         const EVASION_DISTANCE = 120;
         let isMoving = false;
+        let isOnLeft = true; // Track button position
 
         // Function to calculate distance between two points
         function getDistance(x1, y1, x2, y2) {
             return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
         }
 
-        // Function to move NO button laterally (only horizontal movement)
+        // Function to move NO button between two fixed positions
         function moveNoButton() {
             if (isMoving) return;
             isMoving = true;
 
             const container = buttonsContainer.getBoundingClientRect();
-            const button = btnNo.getBoundingClientRect();
+            const yesButton = btnYes.getBoundingClientRect();
+            const noButton = btnNo.getBoundingClientRect();
             
-            // Get current button position relative to container
-            const currentLeft = parseFloat(btnNo.style.left) || 0;
+            // Define two fixed positions (left and right)
+            // Left position: to the left of YES button with spacing
+            const leftPosition = -noButton.width - 20;
             
-            // Calculate safe horizontal boundaries
-            const minLeft = -150; // Can go left outside container
-            const maxLeft = container.width - button.width + 150; // Can go right outside container
+            // Right position: to the right of YES button with more spacing
+            const rightPosition = yesButton.width + 60;
             
-            // Generate new horizontal position (opposite side logic)
-            let newLeft;
-            if (currentLeft < container.width / 2) {
-                // If on left side, jump to right side
-                newLeft = (container.width / 2) + Math.random() * (maxLeft - container.width / 2);
+            // Toggle between positions
+            if (isOnLeft) {
+                btnNo.style.left = rightPosition + 'px';
+                isOnLeft = false;
             } else {
-                // If on right side, jump to left side
-                newLeft = minLeft + Math.random() * (container.width / 2 - minLeft);
+                btnNo.style.left = leftPosition + 'px';
+                isOnLeft = true;
             }
-            
-            // Apply new horizontal position (vertical stays the same)
-            btnNo.style.left = newLeft + 'px';
             
             setTimeout(() => {
                 isMoving = false;
@@ -904,11 +905,15 @@
             }
         }
 
-        // Initialize button position
+        // Initialize button position (start on the left)
         window.addEventListener('load', () => {
             btnNo.style.position = 'absolute';
-            btnNo.style.left = '0px';
             btnNo.style.top = '0px';
+            
+            // Calculate initial left position
+            const noButton = btnNo.getBoundingClientRect();
+            const initialLeft = -noButton.width - 20;
+            btnNo.style.left = initialLeft + 'px';
         });
     </script>
 </body>

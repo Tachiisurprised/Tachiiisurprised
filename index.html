@@ -850,8 +850,8 @@
             const noButton = btnNo.getBoundingClientRect();
             
             // Define two fixed positions (left and right)
-            // Left position: to the left of YES button with spacing
-            const leftPosition = -noButton.width - 20;
+            // Left position: partially visible on the left
+            const leftPosition = -60; // Más visible
             
             // Right position: to the right of YES button with more spacing
             const rightPosition = yesButton.width + 60;
@@ -1133,11 +1133,7 @@
         window.addEventListener('load', () => {
             btnNo.style.position = 'absolute';
             btnNo.style.top = '0px';
-            
-            // Calculate initial left position
-            const noButton = btnNo.getBoundingClientRect();
-            const initialLeft = -noButton.width - 20;
-            btnNo.style.left = initialLeft + 'px';
+            btnNo.style.left = '-60px'; // Coincide con leftPosition
         });
     </script>
 </body>

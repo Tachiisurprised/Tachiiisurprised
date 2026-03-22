@@ -11,7 +11,7 @@
             padding: 0;
             box-sizing: border-box;
         }
-
+ 
         :root {
             --rose: #FFB6C1;
             --blush: #FFE4E8;
@@ -21,7 +21,7 @@
             --gold: #FFD700;
             --shadow: rgba(255, 182, 193, 0.3);
         }
-
+ 
         body {
             font-family: 'Quicksand', sans-serif;
             min-height: 100vh;
@@ -32,7 +32,7 @@
             overflow-x: hidden;
             position: relative;
         }
-
+ 
         /* Decorative floating hearts background */
         .heart-bg {
             position: fixed;
@@ -44,7 +44,7 @@
             z-index: 0;
             overflow: hidden;
         }
-
+ 
         .heart-bg::before,
         .heart-bg::after {
             content: '💕';
@@ -53,19 +53,19 @@
             opacity: 0.1;
             animation: float 20s infinite;
         }
-
+ 
         .heart-bg::before {
             top: 10%;
             left: 20%;
             animation-delay: 0s;
         }
-
+ 
         .heart-bg::after {
             top: 60%;
             right: 15%;
             animation-delay: 5s;
         }
-
+ 
         @keyframes float {
             0%, 100% {
                 transform: translateY(0) rotate(0deg);
@@ -74,7 +74,7 @@
                 transform: translateY(-30px) rotate(10deg);
             }
         }
-
+ 
         /* Main container */
         .container {
             position: relative;
@@ -91,7 +91,7 @@
             animation: fadeIn 1s ease-out;
             overflow: visible;
         }
-
+ 
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -102,7 +102,7 @@
                 transform: translateY(0) scale(1);
             }
         }
-
+ 
         /* Typography */
         .title {
             font-family: 'Parisienne', cursive;
@@ -113,7 +113,7 @@
             line-height: 1.3;
             animation: titleGlow 3s ease-in-out infinite;
         }
-
+ 
         @keyframes titleGlow {
             0%, 100% {
                 text-shadow: 2px 2px 4px rgba(216, 83, 127, 0.2);
@@ -122,7 +122,7 @@
                 text-shadow: 2px 2px 12px rgba(216, 83, 127, 0.4);
             }
         }
-
+ 
         .subtitle {
             font-size: 1.1rem;
             color: #8B6090;
@@ -131,7 +131,7 @@
             opacity: 0;
             animation: fadeInUp 1s ease-out 0.3s forwards;
         }
-
+ 
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -142,7 +142,7 @@
                 transform: translateY(0);
             }
         }
-
+ 
         .question {
             font-size: 1.8rem;
             font-weight: 600;
@@ -151,7 +151,7 @@
             opacity: 0;
             animation: fadeInUp 1s ease-out 0.6s forwards;
         }
-
+ 
         /* Buttons container */
         .buttons {
             display: flex;
@@ -165,7 +165,7 @@
             animation: fadeInUp 1s ease-out 0.9s forwards;
             overflow: visible;
         }
-
+ 
         .btn {
             padding: 18px 40px;
             font-size: 1.2rem;
@@ -179,7 +179,7 @@
             position: relative;
             overflow: hidden;
         }
-
+ 
         .btn::before {
             content: '';
             position: absolute;
@@ -192,28 +192,28 @@
             transform: translate(-50%, -50%);
             transition: width 0.6s, height 0.6s;
         }
-
+ 
         .btn:hover::before {
             width: 300px;
             height: 300px;
         }
-
+ 
         .btn-yes {
             background: linear-gradient(135deg, #FF69B4 0%, #FF1493 100%);
             color: white;
             position: relative;
             z-index: 10;
         }
-
+ 
         .btn-yes:hover {
             transform: scale(1.1);
             box-shadow: 0 15px 40px rgba(255, 20, 147, 0.4);
         }
-
+ 
         .btn-yes:active {
             transform: scale(1.05);
         }
-
+ 
         .btn-no {
             background: linear-gradient(135deg, #FFB6C1 0%, #FFC0CB 100%);
             color: #D8537F;
@@ -221,11 +221,11 @@
             transition: all 0.15s cubic-bezier(0.68, -0.55, 0.265, 1.55);
             z-index: 5;
         }
-
+ 
         .btn-no:hover {
             box-shadow: 0 15px 40px rgba(255, 182, 193, 0.5);
         }
-
+ 
         /* Footer text */
         .footer {
             font-size: 0.9rem;
@@ -235,23 +235,23 @@
             opacity: 0;
             animation: fadeInUp 1s ease-out 1.2s forwards;
         }
-
+ 
         /* Success screen */
         .success-screen {
             display: none;
             animation: fadeIn 1s ease-out;
         }
-
+ 
         .success-screen.active {
             display: block;
         }
-
+ 
         .success-icon {
             font-size: 5rem;
             margin-bottom: 20px;
             animation: bounce 1s ease-out;
         }
-
+ 
         @keyframes bounce {
             0%, 20%, 50%, 80%, 100% {
                 transform: translateY(0);
@@ -263,21 +263,21 @@
                 transform: translateY(-15px);
             }
         }
-
+ 
         .success-title {
             font-family: 'Parisienne', cursive;
             font-size: 2.5rem;
             color: #D8537F;
             margin-bottom: 20px;
         }
-
+ 
         .success-message {
             font-size: 1.2rem;
             color: #8B6090;
             margin-bottom: 40px;
             line-height: 1.6;
         }
-
+ 
         .btn-enter {
             background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
             color: white;
@@ -291,12 +291,12 @@
             box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
             transition: all 0.3s ease;
         }
-
+ 
         .btn-enter:hover {
             transform: scale(1.1);
             box-shadow: 0 15px 40px rgba(255, 215, 0, 0.5);
         }
-
+ 
         /* Confetti hearts */
         .confetti {
             position: fixed;
@@ -305,45 +305,45 @@
             pointer-events: none;
             z-index: 1000;
         }
-
+ 
         /* Responsive design */
         @media (max-width: 600px) {
             .container {
                 padding: 40px 30px;
             }
-
+ 
             .title {
                 font-size: 2rem;
             }
-
+ 
             .question {
                 font-size: 1.4rem;
             }
-
+ 
             .btn {
                 padding: 15px 30px;
                 font-size: 1rem;
             }
-
+ 
             .success-title {
                 font-size: 2rem;
             }
-
+ 
             .success-message {
                 font-size: 1rem;
             }
         }
-
+ 
         /* Calendar Screen */
         .calendar-screen {
             display: none;
             animation: fadeIn 1s ease-out;
         }
-
+ 
         .calendar-screen.active {
             display: block;
         }
-
+ 
         .calendar-title {
             font-family: 'Parisienne', cursive;
             font-size: 2.5rem;
@@ -351,7 +351,7 @@
             margin-bottom: 30px;
             text-shadow: 2px 2px 4px rgba(216, 83, 127, 0.2);
         }
-
+ 
         .calendar-container {
             background: white;
             border-radius: 20px;
@@ -360,7 +360,7 @@
             max-width: 400px;
             margin: 0 auto;
         }
-
+ 
         .calendar-header {
             display: flex;
             justify-content: center;
@@ -370,13 +370,13 @@
             font-weight: 600;
             color: #D8537F;
         }
-
+ 
         .calendar-grid {
             display: grid;
             grid-template-columns: repeat(7, 1fr);
             gap: 8px;
         }
-
+ 
         .calendar-day-name {
             text-align: center;
             font-size: 0.8rem;
@@ -384,7 +384,7 @@
             color: #8B6090;
             padding: 8px 0;
         }
-
+ 
         .calendar-day {
             aspect-ratio: 1;
             display: flex;
@@ -396,11 +396,11 @@
             cursor: default;
             transition: all 0.3s ease;
         }
-
+ 
         .calendar-day.empty {
             background: transparent;
         }
-
+ 
         .calendar-day.special {
             background: linear-gradient(135deg, #FF69B4 0%, #FF1493 100%);
             color: white;
@@ -410,7 +410,7 @@
             animation: pulse 2s ease-in-out infinite;
             box-shadow: 0 5px 15px rgba(255, 20, 147, 0.4);
         }
-
+ 
         .calendar-day.special::after {
             content: '🎁';
             position: absolute;
@@ -418,12 +418,12 @@
             right: -8px;
             font-size: 1.2rem;
         }
-
+ 
         .calendar-day.special:hover {
             transform: scale(1.1);
             box-shadow: 0 8px 20px rgba(255, 20, 147, 0.6);
         }
-
+ 
         @keyframes pulse {
             0%, 100% {
                 transform: scale(1);
@@ -432,7 +432,7 @@
                 transform: scale(1.05);
             }
         }
-
+ 
         /* Modal for clothing options */
         .modal {
             display: none;
@@ -447,11 +447,11 @@
             justify-content: center;
             animation: fadeIn 0.3s ease-out;
         }
-
+ 
         .modal.active {
             display: flex;
         }
-
+ 
         .modal-content {
             background: white;
             border-radius: 30px;
@@ -463,7 +463,7 @@
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
             animation: slideUp 0.4s ease-out;
         }
-
+ 
         @keyframes slideUp {
             from {
                 transform: translateY(50px);
@@ -474,7 +474,7 @@
                 opacity: 1;
             }
         }
-
+ 
         .modal-title {
             font-family: 'Parisienne', cursive;
             font-size: 2.2rem;
@@ -482,20 +482,20 @@
             margin-bottom: 15px;
             text-align: center;
         }
-
+ 
         .modal-subtitle {
             font-size: 1rem;
             color: #8B6090;
             margin-bottom: 30px;
             text-align: center;
         }
-
+ 
         .outfit-options {
             display: flex;
             flex-direction: column;
             gap: 15px;
         }
-
+ 
         .outfit-card {
             background: linear-gradient(135deg, var(--blush) 0%, var(--lavender) 100%);
             border-radius: 20px;
@@ -506,35 +506,35 @@
             transition: all 0.3s ease;
             border: 2px solid transparent;
         }
-
+ 
         .outfit-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 25px rgba(255, 105, 180, 0.3);
             border-color: #FF69B4;
         }
-
+ 
         .outfit-icon {
             font-size: 3rem;
             min-width: 60px;
             text-align: center;
         }
-
+ 
         .outfit-details {
             flex: 1;
         }
-
+ 
         .outfit-type {
             font-size: 1.2rem;
             font-weight: 600;
             color: #D8537F;
             margin-bottom: 5px;
         }
-
+ 
         .outfit-description {
             font-size: 0.9rem;
             color: #666;
         }
-
+ 
         .modal-close {
             background: linear-gradient(135deg, #FF69B4 0%, #FF1493 100%);
             color: white;
@@ -549,35 +549,264 @@
             font-family: 'Quicksand', sans-serif;
             transition: all 0.3s ease;
         }
-
+ 
         .modal-close:hover {
             transform: scale(1.05);
             box-shadow: 0 8px 20px rgba(255, 20, 147, 0.4);
         }
-
+ 
+        /* Photo gallery in modal */
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 25px 0;
+        }
+ 
+        .photo-container {
+            width: 100%;
+            aspect-ratio: 1;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(135deg, var(--blush) 0%, var(--lavender) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+ 
+        .photo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+ 
+        .photo-placeholder {
+            font-size: 3rem;
+            opacity: 0.5;
+        }
+ 
+        .photo-upload-text {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            white-space: nowrap;
+        }
+ 
+        /* End-of-day options */
+        .end-day-options {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 25px;
+        }
+ 
+        .end-day-card {
+            background: linear-gradient(135deg, #FFE4E8 0%, #FFD1DC 100%);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 3px solid transparent;
+            cursor: pointer;
+        }
+ 
+        .end-day-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(255, 105, 180, 0.3);
+            border-color: #FF69B4;
+        }
+ 
+        .end-day-emoji {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+        }
+ 
+        .end-day-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #D8537F;
+            margin-bottom: 10px;
+        }
+ 
+        .end-day-description {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.5;
+        }
+ 
+        @media (max-width: 600px) {
+            .photo-gallery {
+                grid-template-columns: 1fr;
+            }
+ 
+            .end-day-card {
+                padding: 25px 20px;
+            }
+ 
+            .end-day-emoji {
+                font-size: 2.8rem;
+            }
+ 
+            .end-day-title {
+                font-size: 1.2rem;
+            }
+        }
+ 
+        /* Special action button */
+        .special-action-btn {
+            background: linear-gradient(135deg, #FF69B4 0%, #FF1493 100%);
+            color: white;
+            border: none;
+            border-radius: 20px;
+            padding: 12px 30px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 15px;
+            font-family: 'Quicksand', sans-serif;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 20, 147, 0.3);
+        }
+ 
+        .special-action-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(255, 20, 147, 0.5);
+        }
+ 
+        .special-action-btn:active {
+            transform: scale(0.98);
+        }
+ 
+        /* Massage note modal */
+        .massage-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 3000;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.3s ease-out;
+        }
+ 
+        .massage-modal.active {
+            display: flex;
+        }
+ 
+        .massage-note {
+            background: linear-gradient(135deg, #FFF5F7 0%, #FFE4E8 100%);
+            border-radius: 30px;
+            padding: 45px 40px;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+            animation: bounceIn 0.6s ease-out;
+            border: 3px solid #FF69B4;
+            position: relative;
+        }
+ 
+        .massage-emoji {
+            font-size: 4.5rem;
+            margin-bottom: 20px;
+            animation: massage-pulse 2s ease-in-out infinite;
+        }
+ 
+        @keyframes massage-pulse {
+            0%, 100% {
+                transform: scale(1) rotate(-5deg);
+            }
+            50% {
+                transform: scale(1.1) rotate(5deg);
+            }
+        }
+ 
+        .massage-title {
+            font-family: 'Parisienne', cursive;
+            font-size: 2rem;
+            color: #D8537F;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(216, 83, 127, 0.2);
+        }
+ 
+        .massage-text {
+            font-family: 'Quicksand', sans-serif;
+            font-size: 1.15rem;
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+ 
+        .massage-close-btn {
+            background: linear-gradient(135deg, #FF69B4 0%, #FF1493 100%);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 15px 40px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: 'Quicksand', sans-serif;
+            transition: all 0.3s ease;
+        }
+ 
+        .massage-close-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(255, 20, 147, 0.4);
+        }
+ 
+        @media (max-width: 600px) {
+            .massage-note {
+                padding: 35px 25px;
+            }
+ 
+            .massage-emoji {
+                font-size: 3.5rem;
+            }
+ 
+            .massage-title {
+                font-size: 1.6rem;
+            }
+ 
+            .massage-text {
+                font-size: 1rem;
+            }
+        }
+ 
         @media (max-width: 600px) {
             .calendar-container {
                 padding: 15px;
             }
-
+ 
             .calendar-title {
                 font-size: 2rem;
             }
-
+ 
             .modal-content {
                 padding: 30px 20px;
             }
-
+ 
             .outfit-card {
                 flex-direction: column;
                 text-align: center;
             }
-
+ 
             .outfit-icon {
                 font-size: 2.5rem;
             }
         }
-
+ 
         /* New dates button */
         .new-dates-btn {
             background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
@@ -593,16 +822,16 @@
             transition: all 0.3s ease;
             box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);
         }
-
+ 
         .new-dates-btn:hover {
             transform: scale(1.05);
             box-shadow: 0 12px 30px rgba(255, 215, 0, 0.5);
         }
-
+ 
         .new-dates-btn:active {
             transform: scale(0.98);
         }
-
+ 
         /* Falling dates animation */
         .falling-date {
             position: fixed;
@@ -613,7 +842,7 @@
             z-index: 1000;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         }
-
+ 
         /* Message overlay */
         .message-overlay {
             display: none;
@@ -628,11 +857,11 @@
             justify-content: center;
             animation: fadeIn 0.3s ease-out;
         }
-
+ 
         .message-overlay.active {
             display: flex;
         }
-
+ 
         .message-box {
             background: linear-gradient(135deg, #FFE4E8 0%, #FFD1DC 100%);
             border-radius: 30px;
@@ -644,7 +873,7 @@
             animation: bounceIn 0.6s ease-out;
             border: 3px solid #FF69B4;
         }
-
+ 
         @keyframes bounceIn {
             0% {
                 transform: scale(0.3);
@@ -661,13 +890,13 @@
                 opacity: 1;
             }
         }
-
+ 
         .message-emoji {
             font-size: 4rem;
             margin-bottom: 20px;
             animation: rotate 2s ease-in-out infinite;
         }
-
+ 
         @keyframes rotate {
             0%, 100% {
                 transform: rotate(-10deg);
@@ -676,7 +905,7 @@
                 transform: rotate(10deg);
             }
         }
-
+ 
         .message-text {
             font-family: 'Quicksand', sans-serif;
             font-size: 1.5rem;
@@ -685,7 +914,7 @@
             line-height: 1.6;
             margin-bottom: 30px;
         }
-
+ 
         .message-close-btn {
             background: linear-gradient(135deg, #FF69B4 0%, #FF1493 100%);
             color: white;
@@ -698,21 +927,21 @@
             font-family: 'Quicksand', sans-serif;
             transition: all 0.3s ease;
         }
-
+ 
         .message-close-btn:hover {
             transform: scale(1.05);
             box-shadow: 0 8px 20px rgba(255, 20, 147, 0.4);
         }
-
+ 
         @media (max-width: 600px) {
             .message-box {
                 padding: 40px 25px;
             }
-
+ 
             .message-text {
                 font-size: 1.2rem;
             }
-
+ 
             .message-emoji {
                 font-size: 3rem;
             }
@@ -736,7 +965,7 @@
             
             <p class="footer">Creado con amor especialmente para ti 💖</p>
         </div>
-
+ 
         <!-- Success screen -->
         <div class="success-screen" id="successScreen">
             <div class="success-icon">😍</div>
@@ -751,7 +980,7 @@
             </p>
             <button class="btn-enter" id="btnEnter">Ir al calendario de sorpresas 🎁</button>
         </div>
-
+ 
         <!-- Calendar screen -->
         <div class="calendar-screen" id="calendarScreen">
             <h1 class="calendar-title">Calendario de Sorpresas 💝</h1>
@@ -773,7 +1002,7 @@
             <button class="new-dates-btn" id="newDatesBtn">Nuevas fechas incoming 🎉</button>
         </div>
     </div>
-
+ 
     <!-- Message overlay for new dates -->
     <div class="message-overlay" id="messageOverlay">
         <div class="message-box">
@@ -785,43 +1014,91 @@
             <button class="message-close-btn" id="messageCloseBtn">Cerrar 💝</button>
         </div>
     </div>
-
-    <!-- Modal for outfit options -->
+ 
+    <!-- Massage note modal -->
+    <div class="massage-modal" id="massageModal">
+        <div class="massage-note">
+            <div class="massage-emoji">💆‍♀️</div>
+            <h2 class="massage-title">Acción Especial Revelada</h2>
+            <p class="massage-text">
+                Prepárate para una sesión de masaje de esos que te llevan a dormir con los angelitos 😴✨<br><br>
+                Relajación total, manos mágicas, y un final perfecto para un día perfecto.
+                Te vas a derretir de lo relajada que vas a quedar, mi amor 💕
+            </p>
+            <button class="massage-close-btn" id="massageCloseBtn">Me encanta 😍</button>
+        </div>
+    </div>
+ 
+    <!-- Modal for March 15 - Photos -->
     <div class="modal" id="outfitModal">
         <div class="modal-content">
             <h2 class="modal-title">¡Día Especial! 💖</h2>
-            <p class="modal-subtitle">Prepárate con estas opciones de vestimenta para nuestra sorpresa:</p>
+            <p class="modal-subtitle">Fue uno de mis mejores días de la vida, el sushi contigo fue mágico... Cada momento a tu lado se convierte en un recuerdo que atesoro en mi corazón. Tu sonrisa iluminó todo ese día y sigue iluminando mi vida cada día. 💕</p>
             
-            <div class="outfit-options">
-                <div class="outfit-card">
-                    <div class="outfit-icon">👗</div>
-                    <div class="outfit-details">
-                        <div class="outfit-type">Prenda Casual</div>
-                        <div class="outfit-description">Algo cómodo y relajado para disfrutar del día</div>
+            <div class="photo-gallery">
+                <div class="photo-container">
+                    <img src="https://via.placeholder.com/400x400/FFB6C1/FFFFFF?text=Foto+1" alt="Recuerdo especial 1" id="photo1">
+                </div>
+                <div class="photo-container">
+                    <img src="https://via.placeholder.com/400x400/E6E6FA/FFFFFF?text=Foto+2" alt="Recuerdo especial 2" id="photo2">
+                </div>
+            </div>
+            
+            <p class="modal-subtitle" style="margin-top: 20px; font-style: italic; color: #8B6090; font-size: 0.9rem;">
+                Estos momentos contigo son mi tesoro más preciado 📸💕
+            </p>
+            
+            <button class="modal-close" id="modalClose">Cerrar 💕</button>
+        </div>
+    </div>
+ 
+    <!-- Modal for Tachii Special Day (March 31) -->
+    <div class="modal" id="tachiiModal">
+        <div class="modal-content">
+            <h2 class="modal-title">✨ Especial Tachii ✨</h2>
+            <div class="success-icon" style="font-size: 4rem; margin: 20px 0;">🎂</div>
+            <p class="modal-subtitle" style="font-size: 1.3rem; font-weight: 600; color: #FF69B4;">
+                ¡Hoy es tu día especial, mi amor! 💖
+            </p>
+            <p class="modal-subtitle" style="margin-top: 20px;">
+                Este día es para celebrarte a ti, la persona más maravillosa que existe.
+                Eres mi inspiración, mi alegría, mi todo. Gracias por existir y por llenar
+                mi vida de tanto amor y felicidad. 💕
+            </p>
+            
+            <p class="modal-subtitle" style="margin-top: 25px; font-weight: 600; color: #D8537F;">
+                ¿Cómo te gustaría terminar este día especial? 🌙
+            </p>
+            
+            <div class="end-day-options">
+                <div class="end-day-card">
+                    <div class="end-day-emoji">🌃</div>
+                    <div class="end-day-title">Noche Romántica</div>
+                    <div class="end-day-description">
+                        Una cena especial, música suave, y una conversación bajo las estrellas.
+                        Creando recuerdos mágicos que durarán para siempre.
                     </div>
+                    <button class="special-action-btn" id="specialActionBtn">Incluir acción especial ✨</button>
                 </div>
                 
-                <div class="outfit-card">
-                    <div class="outfit-icon">👔</div>
-                    <div class="outfit-details">
-                        <div class="outfit-type">Prenda Formal</div>
-                        <div class="outfit-description">Elegante y sofisticado para momentos especiales</div>
-                    </div>
-                </div>
-                
-                <div class="outfit-card">
-                    <div class="outfit-icon">👟</div>
-                    <div class="outfit-details">
-                        <div class="outfit-type">Prenda Deportiva</div>
-                        <div class="outfit-description">Lista para la acción y aventuras emocionantes</div>
+                <div class="end-day-card">
+                    <div class="end-day-emoji">🎬</div>
+                    <div class="end-day-title">Noche de Películas</div>
+                    <div class="end-day-description">
+                        Acurrucados viendo tus películas favoritas, con snacks deliciosos
+                        y toda la comodidad del mundo. Risas, abrazos y momentos perfectos.
                     </div>
                 </div>
             </div>
             
-            <button class="modal-close" id="modalClose">Entendido 💕</button>
+            <p class="modal-subtitle" style="margin-top: 20px; font-style: italic; color: #D8537F;">
+                Cualquier opción que elijas será perfecta, porque estaré contigo. ¡Feliz día, Tachii! 🎉
+            </p>
+            
+            <button class="modal-close" id="tachiiModalClose">Te amo mucho 💝</button>
         </div>
     </div>
-
+ 
     <script>
         // Get elements
         const btnYes = document.getElementById('btnYes');
@@ -829,22 +1106,22 @@
         const initialScreen = document.getElementById('initialScreen');
         const successScreen = document.getElementById('successScreen');
         const buttonsContainer = document.getElementById('buttonsContainer');
-
+ 
         // Configuration
         const EVASION_DISTANCE = 120;
         let isMoving = false;
         let isOnLeft = false; // Cambiar a false para empezar en la derecha
-
+ 
         // Function to calculate distance between two points
         function getDistance(x1, y1, x2, y2) {
             return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
         }
-
+ 
         // Function to move NO button between two fixed positions
         function moveNoButton() {
             if (isMoving) return;
             isMoving = true;
-
+ 
             const container = buttonsContainer.getBoundingClientRect();
             const yesButton = btnYes.getBoundingClientRect();
             const noButton = btnNo.getBoundingClientRect();
@@ -869,11 +1146,11 @@
                 isMoving = false;
             }, 200);
         }
-
+ 
         // Track mouse movement continuously
         document.addEventListener('mousemove', (e) => {
             if (successScreen.classList.contains('active')) return;
-
+ 
             const button = btnNo.getBoundingClientRect();
             const buttonCenterX = button.left + button.width / 2;
             const buttonCenterY = button.top + button.height / 2;
@@ -885,7 +1162,7 @@
                 moveNoButton();
             }
         });
-
+ 
         // Track touch movement on mobile
         document.addEventListener('touchmove', (e) => {
             if (successScreen.classList.contains('active')) return;
@@ -901,30 +1178,30 @@
                 moveNoButton();
             }
         });
-
+ 
         // Prevent hover
         btnNo.addEventListener('mouseenter', (e) => {
             moveNoButton();
         });
-
+ 
         // Prevent touch
         btnNo.addEventListener('touchstart', (e) => {
             e.preventDefault();
             moveNoButton();
         });
-
+ 
         // Prevent click
         btnNo.addEventListener('click', (e) => {
             e.preventDefault();
             e.stopPropagation();
             moveNoButton();
         });
-
+ 
         // Prevent focus
         btnNo.addEventListener('focus', (e) => {
             moveNoButton();
         });
-
+ 
         // Disable pointer events when cursor is very close
         let pointerTimeout;
         document.addEventListener('mousemove', (e) => {
@@ -944,7 +1221,7 @@
                 }, 300);
             }
         });
-
+ 
         // YES button - always works
         btnYes.addEventListener('click', () => {
             createConfetti();
@@ -954,14 +1231,14 @@
                 successScreen.classList.add('active');
             }, 1000);
         });
-
+ 
         // Enter button - show calendar
         document.getElementById('btnEnter').addEventListener('click', () => {
             successScreen.classList.remove('active');
             document.getElementById('calendarScreen').classList.add('active');
             generateCalendar();
         });
-
+ 
         // Generate March 2026 calendar
         function generateCalendar() {
             const calendarGrid = document.getElementById('calendarGrid');
@@ -970,8 +1247,9 @@
             const firstDay = 0; // Sunday
             const daysInMonth = 31;
             
-            // The third Sunday is March 15, 2026
-            const specialDay = 15;
+            // Special days
+            const day15Special = 15; // Third Sunday - Sushi date
+            const day31Special = 31; // Especial Tachii
             
             // Add empty cells for days before the 1st
             for (let i = 0; i < firstDay; i++) {
@@ -987,36 +1265,63 @@
                 dayElement.textContent = day;
                 
                 // Mark the special day (third Sunday - March 15)
-                if (day === specialDay) {
+                if (day === day15Special) {
                     dayElement.classList.add('special');
                     dayElement.addEventListener('click', () => {
                         showOutfitModal();
                     });
                 }
                 
+                // Mark Tachii special day (March 31)
+                if (day === day31Special) {
+                    dayElement.classList.add('special');
+                    dayElement.addEventListener('click', () => {
+                        showTachiiModal();
+                    });
+                }
+                
                 calendarGrid.appendChild(dayElement);
             }
         }
-
+ 
         // Show outfit modal
         function showOutfitModal() {
             const modal = document.getElementById('outfitModal');
             modal.classList.add('active');
             createConfetti();
         }
-
+ 
+        // Show Tachii special modal
+        function showTachiiModal() {
+            const modal = document.getElementById('tachiiModal');
+            modal.classList.add('active');
+            createConfetti();
+        }
+ 
         // Close modal
         document.getElementById('modalClose').addEventListener('click', () => {
             document.getElementById('outfitModal').classList.remove('active');
         });
-
+ 
+        // Close Tachii modal
+        document.getElementById('tachiiModalClose').addEventListener('click', () => {
+            document.getElementById('tachiiModal').classList.remove('active');
+        });
+ 
         // Close modal when clicking outside
         document.getElementById('outfitModal').addEventListener('click', (e) => {
             if (e.target.id === 'outfitModal') {
                 document.getElementById('outfitModal').classList.remove('active');
             }
         });
-
+ 
+        // Close Tachii modal when clicking outside
+        document.getElementById('tachiiModal').addEventListener('click', (e) => {
+            if (e.target.id === 'tachiiModal') {
+                document.getElementById('tachiiModal').classList.remove('active');
+            }
+        });
+ 
         // New dates button functionality
         document.getElementById('newDatesBtn').addEventListener('click', () => {
             createFallingDates();
@@ -1024,19 +1329,38 @@
                 document.getElementById('messageOverlay').classList.add('active');
             }, 1000);
         });
-
+ 
         // Close message overlay
         document.getElementById('messageCloseBtn').addEventListener('click', () => {
             document.getElementById('messageOverlay').classList.remove('active');
         });
-
+ 
         // Close message when clicking outside
         document.getElementById('messageOverlay').addEventListener('click', (e) => {
             if (e.target.id === 'messageOverlay') {
                 document.getElementById('messageOverlay').classList.remove('active');
             }
         });
-
+ 
+        // Special action button - show massage modal
+        document.getElementById('specialActionBtn').addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevent card click
+            document.getElementById('massageModal').classList.add('active');
+            createConfetti();
+        });
+ 
+        // Close massage modal
+        document.getElementById('massageCloseBtn').addEventListener('click', () => {
+            document.getElementById('massageModal').classList.remove('active');
+        });
+ 
+        // Close massage modal when clicking outside
+        document.getElementById('massageModal').addEventListener('click', (e) => {
+            if (e.target.id === 'massageModal') {
+                document.getElementById('massageModal').classList.remove('active');
+            }
+        });
+ 
         // Create falling dates animation
         function createFallingDates() {
             const dates = [
@@ -1052,7 +1376,7 @@
                 '📅 14/02'
             ];
             const dateCount = 30;
-
+ 
             for (let i = 0; i < dateCount; i++) {
                 setTimeout(() => {
                     const dateElement = document.createElement('div');
@@ -1062,7 +1386,7 @@
                     dateElement.style.top = '-50px';
                     
                     document.body.appendChild(dateElement);
-
+ 
                     const duration = Math.random() * 2 + 3;
                     const xMovement = (Math.random() - 0.5) * 150;
                     const rotation = Math.random() * 720 - 360;
@@ -1080,19 +1404,19 @@
                         duration: duration * 1000,
                         easing: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)'
                     });
-
+ 
                     setTimeout(() => {
                         dateElement.remove();
                     }, duration * 1000);
                 }, i * 100);
             }
         }
-
+ 
         // Confetti animation
         function createConfetti() {
             const hearts = ['💕', '💖', '💗', '💓', '💝', '❤️', '💘'];
             const confettiCount = 50;
-
+ 
             for (let i = 0; i < confettiCount; i++) {
                 setTimeout(() => {
                     const confetti = document.createElement('div');
@@ -1104,7 +1428,7 @@
                     confetti.style.position = 'fixed';
                     
                     document.body.appendChild(confetti);
-
+ 
                     const duration = Math.random() * 2 + 2;
                     const xMovement = (Math.random() - 0.5) * 200;
                     
@@ -1121,14 +1445,14 @@
                         duration: duration * 1000,
                         easing: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)'
                     });
-
+ 
                     setTimeout(() => {
                         confetti.remove();
                     }, duration * 1000);
                 }, i * 50);
             }
         }
-
+ 
         // Initialize button position (start on the right)
         window.addEventListener('load', () => {
             btnNo.style.position = 'absolute';
